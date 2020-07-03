@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+	background-image: url('https://img.indiefolio.com/fit-in/1100x0/filters:format(webp):fill(transparent)/project/body/beaf95966b08e86e0f529da1fb7e31d4.png');
+	background-size:cover;
+	background-repeat: repeat-y;
+	background-attachment: fixed;
+}

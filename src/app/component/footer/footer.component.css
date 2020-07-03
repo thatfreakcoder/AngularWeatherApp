@@ -1,0 +1,75 @@
+.footer {
+	width: 90%;
+	height: 100%;
+	margin: 20px auto;
+	background: rgba(255, 255, 255, 0.5);
+	border-radius: 20px;
+	box-shadow: 2px 10px 20px black;
+	padding: 30px;
+	font-family: 'Pangolin', cursive;
+}
+.footer-elements li {
+	margin: 0 auto;
+	padding: 10px;
+	height:60px;
+	width: 80px;
+	transition: width .5s;
+}
+.footer-elements li:hover {
+	width: 33%;
+}
+h1 {
+	color: black;
+}
+li {
+	padding: 40px auto;
+	border-radius: 10px;
+	color: white;
+}
+h2{
+	color: white;
+}
+#github {
+	background-image: linear-gradient(to top right, #211f1f, #1c1c1c);
+}
+#instagram {
+	background-image: linear-gradient(to top right, #833ab4, #f77737);
+}
+#linkedin {
+	background-image: linear-gradient(to top right, #3474eb, #035bff);
+}
+li .text-center {
+	display: none;
+	width: 200px;
+	visibility: hidden;
+}
+li:hover .text-center {
+	animation: displ .5s infinite;
+	animation-delay: .5s;
+	display : inline-block;
+}
+@keyframes displ {
+	from{
+		visibility: hidden;
+	}
+	to{
+		visibility: visible;
+	}
+}
+@media screen and (max-width: 800px) {
+	.nav{
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: column;
+	}
+	.footer-elements li {
+		width: 50%;
+	}
+	.footer-elements li:hover {
+		width: 100%;
+	}
+	li .text-center {
+		width: 100%;
+	}
+
+}

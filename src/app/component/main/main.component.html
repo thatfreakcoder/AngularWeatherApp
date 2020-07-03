@@ -1,0 +1,70 @@
+<div class="main">
+	<div id="widget-container">
+		<div class="container mt-3">
+			<div class="input-group col-lg-6 m-auto mt-lg-2">
+				<input type="text" placeholder="Enter City" #cityName class="form-control"/>
+				 <input class="btn btn-primary ml-3" (click)="getCity(cityName.value)" value="Search" type="submit">
+			</div>
+		</div>
+	    <div class="widget-info" *ngIf='!weatherData.main && !weatherData.error'>
+	    	<div class="widget-city"> <h1 class="text-lg-center mt-xl-2">Welcome. Please Start by Searching or use Current Location</h1></div>
+	    </div>
+	    <div class="widget-info" *ngIf='weatherData.error && !weatherData.main'>
+	    	<div class="widget-city"> <h1 class="text-lg-center mt-xl-2 text-capitalize">{{ weatherData.error.message }}</h1></div>
+	    </div>
+		<div class="widget-info" *ngIf='weatherData.main'>
+			<div class="widget-sub-info">
+				<div id="widget-city">
+					{{ weatherData.name }}
+					<h3>{{weatherData.main.temp_min}} °C / {{weatherData.main.temp_max}} °C </h3>
+				</div><!-- widget-city -->
+				<div class="widget-details">
+					<div class="detail-img">
+						<img src="http://openweathermap.org/img/wn/{{weatherData.weather[0].icon}}@2x.png">
+					</div><!-- detail-img -->
+					<div class="detail-text">
+						<h1>{{weatherData.weather[0].main}}</h1>
+						<h3 class="text-capitalize">{{weatherData.weather[0].description}}</h3>
+					</div><!-- detail-text -->
+				</div><!-- widget-deta -->
+			</div>
+			<div class="row w-100" id="widget-cards">
+		        <div class="col-md-3">
+		            <div class="card border-info mx-sm-1 p-3">
+		                <div class="card border-info shadow text-info p-3" ><span class="fas fa-temperature-high" aria-hidden="true"></span></div>
+		                <div class="text-info text-center mt-3"><h4>Feels Like</h4></div>
+		                <div class="text-info text-center mt-2"><h1>{{weatherData.main.feels_like}} °C</h1></div>
+		            </div>
+		        </div>
+		        <div class="col-md-3">
+		            <div class="card border-success mx-sm-1 p-3">
+		                <div class="card border-success shadow text-success p-3"><span class="fas fa-water" aria-hidden="true"></span></div>
+		                <div class="text-success text-center mt-3"><h4>Humidity</h4></div>
+		                <div class="text-success text-center mt-2"><h1>{{ weatherData.main.humidity }} %</h1></div>
+		            </div>
+		        </div>
+		        <div class="col-md-3">
+		            <div class="card border-danger mx-sm-1 p-3">
+		                <div class="card border-danger shadow text-danger p-3" ><span class="fas fa-wind" aria-hidden="true"></span></div>
+		                <div class="text-danger text-center mt-3"><h4>Wind Speed</h4></div>
+		                <div class="text-danger text-center mt-2"><h1>{{ weatherData.wind.speed }} km/h</h1></div>
+		            </div>
+		        </div>
+		        <div class="col-md-3">
+		            <div class="card border-warning mx-sm-1 p-3">
+		                <div class="card border-warning shadow text-warning p-3" ><span class="fas fa-cloud" aria-hidden="true"></span></div>
+		                <div class="text-warning text-center mt-3"><h4>Pressure</h4></div>
+		                <div class="text-warning text-center mt-2"><h1>{{weatherData.main.pressure}} Pascal</h1></div>
+		            </div>
+		        </div>
+		    </div>
+	    </div>
+	</div>
+	<div class="pt-5 m-auto row" role="group">
+		<button type="button" class="btn btn-primary mt-auto col-sm-2 current" (click)="getLocation()"><i class="fas fa-crosshairs"></i>  Current</button>
+		<button type="button" class="btn btn-danger m-auto col-sm-2" (click)="getCity('mumbai')">Mumbai</button>
+		<button type="button" class="btn btn-danger m-auto col-sm-2" (click)="getCity('delhi')">Delhi</button>
+		<button type="button" class="btn btn-danger m-auto col-sm-2" (click)="getCity('bangalore')">Bangalore</button>
+		<button type="button" class="btn btn-danger m-auto col-sm-2" (click)="getCity('Kerala')">Kerala</button>
+	</div>
+</div>
