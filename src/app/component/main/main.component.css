@@ -1,5 +1,4 @@
 .main {
-	/*background-color: rgba(0, 0, 0, 0.4);*/
 	background-size: cover;
 	height: 50%;
 	margin: 20px;
@@ -23,7 +22,6 @@
 	background-position: center;
 	background-size: cover;
 }
-
 #widget-city {
 	font-size: 80px;
 	color: black;
@@ -58,11 +56,7 @@
 	width: min-content;
 }
 .bottom-group button {
-	/*border-radius: 5px;*/
-	/*box-shadow: 0 3px 10px black;*/
 	margin: 10px;
-	/*padding: 5px;*/
-	/*width: 10%;*/
 	transition: transform 0.3s, box-shadow 0.3s
 }
 .bottom-group button:hover {
@@ -105,46 +99,4 @@
 	.widget-details {
 		left: 0;
 	}
-	.bottom-group {
-		/*flex-direction: column;*/
-	}
-
 }
-	/*#widget-city {
-		float: none;
-		padding-left: none;
-		padding-top: none;
-	}*/
-/*.widget-details {
-		float: none;
-		padding-right: none;
-		padding: none;
-	}
-	.bottom-group button{
-		display: none;
-	}
-	.card {
-		margin: 10%;
-	}
-	.card .card{
-		display: none;
-	}
-}
-@media screen and (max-width: 800px) {
-	#widget-city {
-		font-size: 32px;
-		text-align: center;
-		margin: 0 auto;
-	}
-	.widget-details {
-		text-align: center;
-
-	}
-	.widget-details img {
-		height: 120px;
-		width: 120px;
-		margin: 0 auto;
-	}
-}
-
-*/

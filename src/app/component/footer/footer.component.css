@@ -8,6 +8,11 @@
 	padding: 30px;
 	font-family: 'Pangolin', cursive;
 }
+.footer-head{
+	color: black;
+	font-size: 29px;
+	padding-bottom: 10px;
+}
 .footer-elements li {
 	margin: 0 auto;
 	padding: 10px;
@@ -18,7 +23,7 @@
 .footer-elements li:hover {
 	width: 33%;
 }
-h1 {
+h3, h1 {
 	color: black;
 }
 li {

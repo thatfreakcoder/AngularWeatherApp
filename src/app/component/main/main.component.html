@@ -58,6 +58,47 @@
 		            </div>
 		        </div>
 		    </div>
+		    <div class="more-info w-75 m-auto">
+		    	<button type="button" class="btn btn-dark btn-sm" style="margin: 10px;" (click)="more_info()">{{moreInfoText}}</button>
+		    	<div class="info-table" *ngIf='moreInfo'>
+		    		<div class="more-info-table">
+			    		<table class="table table-sm table-hover table-striped table-dark" style="border-radius: 10px;">
+						  <thead>
+						    <tr>
+						      <th scope="col">Attribute</th>
+						      <th scope="col">Value</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td>Visibility</td>
+						      <td>{{weatherData.visibility}} Meters</td>
+						    </tr>
+						    <tr>
+						      <td>Sunrise</td>
+						      <td>{{sunrise_time}}</td>
+						    </tr>
+						    <tr>
+						      <td>Sunset</td>
+						      <td>{{sunset_time}}</td>
+						    </tr>
+						    <tr>
+						      <td>Latitude</td>
+						      <td>{{weatherData.coord.lat}} °</td>
+						    </tr>
+						    <tr>
+						      <td>Longitude</td>
+						      <td>{{weatherData.coord.lon}} °</td>
+						    </tr>
+						    <tr>
+						      <td>Country Code</td>
+						      <td>{{weatherData.sys.country}}</td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+		    	</div>
+		    </div>
 	    </div>
 	</div>
 	<div class="pt-5 m-auto row" role="group">
