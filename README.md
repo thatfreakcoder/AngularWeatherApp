@@ -1,7 +1,7 @@
 ![Language](https://img.shields.io/badge/Language-Angular-red?style=flat-square) ![hacktoberfest](http://img.shields.io/badge/HacktoberFest-Accepted-brightgreen?style=flat-square) ![issues](https://img.shields.io/github/issues/thatfreakcoder/AngularWeatherApp?style=flat-square)
 
 The Website is live [here](https://thatfreakcoder.github.io/AngularWeatherApp)
-For Contributing, please read the [CONTRIBUTIONS](https://github.com/thatfreakcoder/AngularWeatherApp/blob/master/CONTRIBUTIONS.md) File
+For Contributing, please read the [CONTRIBUTING](https://github.com/thatfreakcoder/AngularWeatherApp/blob/master/CONTRIBUTING.md) File
 
 # WeatherApp
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.

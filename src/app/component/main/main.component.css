@@ -70,7 +70,7 @@
 	background-color: #1c1c1c;
 	text-align: justify;
 	text-justify: inter-word;
-	margin: 10px auto;
+	margin: 15px auto;
 }
 .card:hover {
 	transform: scale(1.1);
@@ -83,8 +83,8 @@
 	transform: none;
 	width: 23%;
 	margin-left: 40%;
-	margin-top: -20%;
 	align-items: center;
+	top: -50px;
 }
 @media screen and (max-width: 800px) {
 	#widget-city {
