@@ -7,7 +7,7 @@ import { WeatherCallService } from 'src/app/services/weather-call.service';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-	
+
   weatherData : any = {};
 	lat : any;
 	lon : any;
@@ -40,12 +40,11 @@ export class MainComponent implements OnInit {
       this.weatherData = data;
     }, (error) => {
       console.log('promise rejected with : ' + JSON.stringify(error));
-      this.weatherData = error; 
-    })    
+      this.weatherData = error;
+    })
   }
 
   getCity(city : string) {
-    this.moreInfo = false;
     const promise = this.weatherService.getWeatherDataByCityName(city).toPromise();
     console.log(promise);
 
