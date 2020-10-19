@@ -102,7 +102,7 @@
 	    </div>
 	</div>
 	<div class="pt-5 m-auto row" role="group">
-		<button type="button" class="btn btn-primary mt-auto col-sm-2 current" (click)="getLocation()"><i class="fas fa-crosshairs"></i>  Current</button>
+		<button type="button" class="btn btn-primary mt-auto col-sm-2 current" (click)="getLocation(this.coords)"><i class="fas fa-crosshairs"></i>  Current</button>
 		<button type="button" class="btn btn-danger m-auto col-sm-2" (click)="getCity('mumbai')">Mumbai</button>
 		<button type="button" class="btn btn-danger m-auto col-sm-2" (click)="getCity('delhi')">Delhi</button>
 		<button type="button" class="btn btn-danger m-auto col-sm-2" (click)="getCity('bangalore')">Bangalore</button>

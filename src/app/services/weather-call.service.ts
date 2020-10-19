@@ -6,7 +6,8 @@ import { HttpClient, HttpParams } from '@angular/common/http'
 })
 export class WeatherCallService {
 	url = 'https://api.openweathermap.org/data/2.5/weather';
-	apiKey = '2827a36cd50469b94ec0767f70b51159';
+  apiKey = '2827a36cd50469b94ec0767f70b51159';
+
 
   constructor(private http : HttpClient) { }
 
