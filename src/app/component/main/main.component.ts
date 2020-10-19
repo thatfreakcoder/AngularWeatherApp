@@ -55,7 +55,6 @@ export class MainComponent implements OnInit {
   }
 
   getCity(city : string) {
-    this.moreInfo = false;
     const promise = this.weatherService.getWeatherDataByCityName(city).toPromise();
     console.log(promise);
 
