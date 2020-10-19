@@ -7,32 +7,42 @@ import { WeatherCallService } from 'src/app/services/weather-call.service';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-	
+
   weatherData : any = {};
-	lat : any;
-	lon : any;
+  coords: Icoords;
   moreInfo: boolean = false;
   moreInfoText: string = 'Show More Info';
   sunrise_time : any;
   sunset_time : any;
+  flag: boolean = true;
 
   constructor(private weatherService : WeatherCallService) { }
 
-  ngOnInit(): void {
-  	this.currentLocation();
+  ngOnInit(): void{
+    this.currentLocation();
   }
 
   currentLocation() {
   	if('geolocation' in navigator) {
+      this.coords= {
+        lat: null,
+        lon: null
+      }
   		navigator.geolocation.watchPosition((position) => {
-  			this.lat = position.coords.latitude;
-  			this.lon = position.coords.longitude;
-  		})
-  	}
+        this.coords.lat = position.coords.latitude;
+        this.coords.lon = position.coords.longitude;
+        if(this.flag == true){
+        this.getLocation(this.coords);
+        this.flag = false;
+        }
+
+      })
+
+    }
   }
 
-  getLocation() {
-  	const promise = this.weatherService.getWeatherDataByCoords(this.lat, this.lon).toPromise();
+  getLocation(position: Icoords) {
+  	const promise = this.weatherService.getWeatherDataByCoords(position.lat, position.lon).toPromise();
     console.log(promise);
 
     promise.then((data) => {
@@ -40,8 +50,8 @@ export class MainComponent implements OnInit {
       this.weatherData = data;
     }, (error) => {
       console.log('promise rejected with : ' + JSON.stringify(error));
-      this.weatherData = error; 
-    })    
+      this.weatherData = error;
+    })
   }
 
   getCity(city : string) {
@@ -71,4 +81,8 @@ export class MainComponent implements OnInit {
       this.moreInfoText = 'Show More Info';
     }
   }
+}
+interface Icoords{
+  lat: number,
+  lon: number
 }
