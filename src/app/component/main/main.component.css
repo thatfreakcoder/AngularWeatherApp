@@ -86,6 +86,10 @@
 	align-items: center;
 	top: -50px;
 }
+.more-info button{
+	margin: 10px auto;
+	display: flex;
+}
 @media screen and (max-width: 800px) {
 	#widget-city {
 		font-size: 30px;
