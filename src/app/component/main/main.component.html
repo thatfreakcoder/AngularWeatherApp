@@ -59,7 +59,9 @@
 		        </div>
 		    </div>
 		    <div class="more-info w-75 m-auto">
-		    	<button type="button" class="btn btn-dark btn-sm" style="margin: 10px;" (click)="more_info()">{{moreInfoText}}</button>
+          <div class="row justify-content-center">
+            <button type="button" class="btn btn-dark btn-sm" style="margin: 10px;" (click)="more_info()">{{moreInfoText}}</button>
+          </div>
 		    	<div class="info-table" *ngIf='moreInfo'>
 		    		<div class="more-info-table">
 			    		<table class="table table-sm table-hover table-striped table-dark" style="border-radius: 10px;">
